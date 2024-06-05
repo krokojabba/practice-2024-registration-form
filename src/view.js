@@ -36,7 +36,7 @@ const renderFormFields = (form, state) => {
             const invalidMessage = document.createElement('div');
             invalidMessage.textContent = state.fields[fieldName].error;
             invalidMessage.classList.add('invalid-feedback');
-            //invalidMessage.id = 'feedback';
+            invalidMessage.id = `${fieldName}Feedback`;
             form.elements[fieldName].after(invalidMessage);
         }
     });

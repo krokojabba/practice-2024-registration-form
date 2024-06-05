@@ -43,6 +43,7 @@ export default () => {
                 value: null,
                 isValid: null,
                 validator: (value, state) => {
+                    if (!state.fields.password.isValid) return ({ isValid: false, error: 'Enter valid password first' })
                     if (value === state.fields.password.value) return ({ isValid: true, error: '' });
                     return ({ isValid: false, error: 'Password confirm must equal password' });
                 },

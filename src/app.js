@@ -1,4 +1,3 @@
-import _ from "lodash";
 export default (state, initState) => {
     const form = document.querySelector('form');
 
