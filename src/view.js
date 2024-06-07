@@ -21,6 +21,10 @@ const renderForm = (form, state) => {
             form.elements.button.disabled = false;
             break;
         }
+        case 'invalid': {
+            form.elements.button.disabled = true;
+            break;
+        }
         default:
             break;
     }

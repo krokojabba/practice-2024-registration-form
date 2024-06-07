@@ -14,6 +14,6 @@ export default (state, initState) => {
         const { isValid, error } = state.fields[fieldName].validator(value, state);
         state.fields[fieldName] = {...state.fields[fieldName], value, error, isValid};
         const isValidForm = Object.keys(state.fields).every((fieldName) => state.fields[fieldName].isValid);
-        if (isValidForm) state.status = 'valid';
+        state.status = isValidForm ? 'valid' : 'invalid';
     });
 };
